@@ -124,35 +124,36 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="./examples/icons.html">
-                <i class="ni ni-planet text-blue"></i> Icons
+                <a class="nav-link" href="">
+                <i class="ni ni-planet text-blue"></i> Micros
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="./examples/maps.html">
-                <i class="ni ni-pin-3 text-orange"></i> Maps
+                <a class="nav-link" href="">
+                <i class="ni ni-circle-08 text-pink"></i> Conductores
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="./examples/profile.html">
-                <i class="ni ni-single-02 text-yellow"></i> User profile
+                <a class="nav-link" href="">
+                <i class="ni ni-pin-3 text-orange"></i> x
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="./examples/tables.html">
-                <i class="ni ni-bullet-list-67 text-red"></i> Tables
+                <a class="nav-link" href="">
+                <i class="ni ni-single-02 text-yellow"></i> Boletas
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="./examples/login.html">
+                <a class="nav-link" href="">
+                <i class="ni ni-bullet-list-67 text-red"></i> Bitacora
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">
                 <i class="ni ni-key-25 text-info"></i> Login
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./examples/register.html">
-                <i class="ni ni-circle-08 text-pink"></i> Register
-                </a>
-            </li>
+            
             </ul>
             <!-- Divider -->
             <hr class="my-3">

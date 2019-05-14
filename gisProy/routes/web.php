@@ -27,3 +27,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin/welcome', 'EjemploController@welcome')->name('adminWelcome');
 Route::get('/admin/conductorPerfil', 'ConductorController@conductorPerfil');
 Route::get('/admin/conductores', 'ConductorController@conductores');
+Route::get('/admin/micros', 'MicroController@micros');
+Route::get('/admin/microNew', 'MicroController@microNew')->name('microNew');
+Route::post('/admin/microSave', 'MicroController@microSave')->name('microSave');
+

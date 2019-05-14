@@ -17,6 +17,23 @@ class MicroController extends Controller
         //
     }
 
+    public function micros(){
+        $micros = micro::all();
+        return view('admin.micros', compact("micros"));
+    }
+
+    public function microNew(){
+        return view('admin.microNew');
+    }
+
+    public function microSave(Request $request){
+        $micro = new Micro();
+        $micro->placa= $request->input('placa');
+        $micro->modelo= $request->input('modelo');
+        $micro->capacidad= $request->input('capacidad');
+        $micro->save();
+        return redirect('/admin/micros');
+    }
     /**
      * Show the form for creating a new resource.
      *
