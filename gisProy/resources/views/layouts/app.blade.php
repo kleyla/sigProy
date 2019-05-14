@@ -231,7 +231,7 @@
                                 <span>Ayuda</span>
                             </a>
                             <div class="dropdown-divider"></div>
-                                <a class="nav-link" href="{{ route('logout') }}"
+                                <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
                                     <i class="ni ni-user-run"></i>
@@ -239,11 +239,7 @@
                                 </a>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     {{ csrf_field() }}
-                                </form>
-                                <a href="#!" class="dropdown-item">
-                                    <i class="ni ni-user-run"></i>
-                                    <span>SalirR</span>
-                                </a>
+                                </form>                                
                         </div>
                     </li>
                 </ul>
