@@ -1,14 +1,14 @@
 @extends('layouts.appmaterial')
 @section('content')
 
-<div class="page-header header-filter" style="background-image: url('{{asset('img/bg7.jpg')}}'); background-size: cover; background-position: top center;">
+<div class="page-header header-filter" style="background-image: url('{{asset('img/brand/gisBack.jpg')}}'); background-size: cover; background-position: top center;">
 <div class="container">
     <div class="row">
         <div class="col-lg-4 col-md-6 ml-auto mr-auto">
           <div class="card card-login">
             <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
-                <div class="card-header card-header-primary text-center">
+                <div class="card-header card-header-info text-center">
                     <h4 class="card-title">Login</h4>
                 
                 </div>
@@ -44,12 +44,12 @@
                 </div>
                 <br><br><br>
                 <div class="footer text-center">
-                    <button type="submit" class="btn btn-primary">
+                    <button type="submit" class="btn btn-info">
                         Ingresar
                     </button>                    
-                </div>
-            </form>
-          </div>
+                </div>                
+            </form>            
+          </div>    
         </div>
       </div>
     </div>

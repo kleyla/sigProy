@@ -30,7 +30,11 @@ class MicroController extends Controller
         $micro = new Micro();
         $micro->placa= $request->input('placa');
         $micro->modelo= $request->input('modelo');
+        $micro->interno =$request->input('interno');
         $micro->capacidad= $request->input('capacidad');
+        $micro->IdConductor=1;
+        $micro->IdPropietario=1;
+        $micro->IdRuta=1;
         $micro->save();
         return redirect('/admin/micros');
     }

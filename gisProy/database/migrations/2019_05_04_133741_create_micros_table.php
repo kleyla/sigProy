@@ -18,7 +18,7 @@ class CreateMicrosTable extends Migration
             $table->string('placa');
             $table->integer('capacidad');
             $table->string('modelo');
-            $table->integer('#Interno');
+            $table->integer('interno');
             $table->integer('IdConductor');
             $table->integer('IdPropietario');
             $table->integer('IdRuta');

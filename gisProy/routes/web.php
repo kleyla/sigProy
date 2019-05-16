@@ -31,4 +31,6 @@ Route::get('/admin/micros', 'MicroController@micros')->name('micros');
 Route::get('/admin/microNew', 'MicroController@microNew')->name('microNew');
 Route::post('/admin/microSave', 'MicroController@microSave')->name('microSave');
 Route::get('/admin/ruta', 'RutaController@index')->name('ruta');
-
+Route::get('/admin/propietarios', 'PropietarioController@propietarios')->name('propietarios');
+Route::get('/admin/propietarioNew', 'PropietarioController@propietarioNew')->name('propietarioNew');
+Route::post('/admin/propietarioSave', 'PropietarioController@propietarioSave')->name('propietarioSave');

@@ -46,6 +46,12 @@
                         <div class="row">
                             <div class="col-lg-6">
                             <div class="form-group">
+                                <label class="form-control-label" for="input-email">Numero Interno</label>
+                                <input type="number" id="interno" name="interno"class="form-control form-control-alternative" placeholder="numero interno..">
+                            </div>
+                            </div>
+                            <div class="col-lg-6">
+                            <div class="form-group">
                                 <label class="form-control-label" for="input-first-name">Capacidad</label>
                                 <input type="number" id="capacidad" name="capacidad" class="form-control form-control-alternative" placeholder="capacidad.." value="">
                             </div>

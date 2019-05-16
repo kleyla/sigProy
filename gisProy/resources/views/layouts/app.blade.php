@@ -8,7 +8,7 @@
   <meta name="author" content="Creative Tim">
   <title>Admin</title>
   <!-- Favicon -->
-  <link href="{{asset('img/brand/favicon.png')}}" rel="icon" type="image/png">
+  <link href="{{asset('img/brand/gisIcon.png')}}" rel="icon" type="image/png">
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
   <!-- Icons -->
@@ -28,7 +28,7 @@
         </button>
         <!-- Brand -->
         <a class="navbar-brand pt-0" href="">
-            <img src="{{asset('img/brand/blue.png')}}" class="navbar-brand-img" alt="...">
+            <img src="{{asset('img/brand/gis.png')}}" class="navbar-brand-img" alt="...">
         </a>
         <!-- User -->
         <ul class="nav align-items-center d-md-none">
@@ -120,12 +120,17 @@
             <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('adminWelcome')}}">
-                <i class="ni ni-tv-2 text-primary"></i> Dashboard
+                <i class="ni ni-tv-2 text-info"></i> Dashboard
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('micros') }}">
                 <i class="ni ni-planet text-blue"></i> Micros
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('propietarios')}}">
+                <i class="ni ni-circle-08 text-pink"></i> Propietarios
                 </a>
             </li>
             <li class="nav-item">
@@ -158,25 +163,7 @@
             <!-- Divider -->
             <hr class="my-3">
             <!-- Heading -->
-            <h6 class="navbar-heading text-muted">Documentation</h6>
-            <!-- Navigation -->
-            <ul class="navbar-nav mb-md-3">
-            <li class="nav-item">
-                <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html">
-                <i class="ni ni-spaceship"></i> Getting started
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/foundation/colors.html">
-                <i class="ni ni-palette"></i> Foundation
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/components/alerts.html">
-                <i class="ni ni-ui-04"></i> Components
-                </a>
-            </li>
-            </ul>
+            
         </div>
         </div>
     </nav>
@@ -186,7 +173,7 @@
         <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
             <div class="container-fluid">
                 <!-- Brand -->
-                <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="./index.html">Dashboard</a>
+                <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="">Dashboards</a>
                 <!-- Form -->
                 <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
                     <div class="form-group mb-0">
