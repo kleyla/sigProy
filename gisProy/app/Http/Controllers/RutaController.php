@@ -14,7 +14,7 @@ class RutaController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.ruta');
     }
 
     /**
@@ -24,7 +24,7 @@ class RutaController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**

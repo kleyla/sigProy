@@ -119,23 +119,23 @@
             <!-- Navigation -->
             <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="./index.html">
+                <a class="nav-link" href="{{ route('adminWelcome')}}">
                 <i class="ni ni-tv-2 text-primary"></i> Dashboard
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="{{ route('micros') }}">
                 <i class="ni ni-planet text-blue"></i> Micros
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="{{ route('conductores')}}">
                 <i class="ni ni-circle-08 text-pink"></i> Conductores
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">
-                <i class="ni ni-pin-3 text-orange"></i> x
+                <a class="nav-link" href="{{ route('ruta') }}">
+                <i class="ni ni-pin-3 text-orange"></i> Ruta
                 </a>
             </li>
             <li class="nav-item">
@@ -278,6 +278,7 @@
   <script src="{{asset('vendor/chart.js/dist/Chart.extension.js')}}"></script>
   <!-- Argon JS -->
   <script src="{{asset('js/argon.js?v=1.0.0')}}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBd3PjUqq81lIOfBPYXrQGWwK5T4ystZjA"></script>
 </body>
 
 </html>

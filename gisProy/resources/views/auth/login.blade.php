@@ -1,7 +1,7 @@
 @extends('layouts.appmaterial')
-
 @section('content')
 
+<div class="page-header header-filter" style="background-image: url('{{asset('img/bg7.jpg')}}'); background-size: cover; background-position: top center;">
 <div class="container">
     <div class="row">
         <div class="col-lg-4 col-md-6 ml-auto mr-auto">
@@ -46,8 +46,7 @@
                 <div class="footer text-center">
                     <button type="submit" class="btn btn-primary">
                         Ingresar
-                    </button>
-                    <a href="" class="btn btn-primary btn-link btn-wd btn-lg">Ingresar</a>
+                    </button>                    
                 </div>
             </form>
           </div>
