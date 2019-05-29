@@ -10,7 +10,7 @@
                 <div class="card-body">
                 <div class="row">
                     <div class="col">
-                    <h5 class="card-title text-uppercase text-muted mb-0">Traffic</h5>
+                    <h5 class="card-title text-uppercase text-muted mb-0">Trafico</h5>
                     <span class="h2 font-weight-bold mb-0">350,897</span>
                     </div>
                     <div class="col-auto">
@@ -21,7 +21,7 @@
                 </div>
                 <p class="mt-3 mb-0 text-muted text-sm">
                     <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
-                    <span class="text-nowrap">Since last month</span>
+                    <span class="text-nowrap">Desde el ultimo mes</span>
                 </p>
                 </div>
             </div>
@@ -31,7 +31,7 @@
                 <div class="card-body">
                 <div class="row">
                     <div class="col">
-                    <h5 class="card-title text-uppercase text-muted mb-0">New users</h5>
+                    <h5 class="card-title text-uppercase text-muted mb-0">Nuevos usuarios</h5>
                     <span class="h2 font-weight-bold mb-0">2,356</span>
                     </div>
                     <div class="col-auto">
@@ -42,7 +42,7 @@
                 </div>
                 <p class="mt-3 mb-0 text-muted text-sm">
                     <span class="text-danger mr-2"><i class="fas fa-arrow-down"></i> 3.48%</span>
-                    <span class="text-nowrap">Since last week</span>
+                    <span class="text-nowrap">Desde el ultimmo mes</span>
                 </p>
                 </div>
             </div>
@@ -52,7 +52,7 @@
                 <div class="card-body">
                 <div class="row">
                     <div class="col">
-                    <h5 class="card-title text-uppercase text-muted mb-0">Sales</h5>
+                    <h5 class="card-title text-uppercase text-muted mb-0">Nuevos micros</h5>
                     <span class="h2 font-weight-bold mb-0">924</span>
                     </div>
                     <div class="col-auto">
@@ -63,7 +63,7 @@
                 </div>
                 <p class="mt-3 mb-0 text-muted text-sm">
                     <span class="text-warning mr-2"><i class="fas fa-arrow-down"></i> 1.10%</span>
-                    <span class="text-nowrap">Since yesterday</span>
+                    <span class="text-nowrap">Desde el ultimo mes</span>
                 </p>
                 </div>
             </div>
@@ -102,11 +102,11 @@
         <div class="col">
             <div class="card shadow">
                 <div class="card-header border-0">
-                <h3 class="mb-0">Conductores</h3>
+                    <h3 class="mb-0">Propietarios</h3>
                     <div class="text-right">
-                            <a href="{{ route('conductorNew') }}" class="btn btn-primary">Nuevo</a>                        
-                        </div>
+                        <a href="{{ route('propietarioNew') }}" class="btn btn-primary">Nuevo</a>                        
                     </div>
+                </div>
                 <div class="table-responsive">
                 <table class="table align-items-center table-flush">
                     <thead class="thead-light">
@@ -120,28 +120,28 @@
                     </tr>
                     </thead>
                     <tbody>
-                        @foreach($conductores as $conductor)
-                            <tr>                            
-                                <td>{{ $conductor->id }}</td>
-                                <td>{{ $conductor->nombre }}</td>
-                                <td>{{ $conductor->apellido }}</td>
-                                <td>{{ $conductor->CI }}</td>
-                                <td>{{ $conductor->telefono }}</td>
-                                <td>{{ $conductor->created_at }}</td>                            
-                                <td class="text-right">
-                                <div class="dropdown">
-                                    <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fas fa-ellipsis-v"></i>
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                    <a class="dropdown-item" href="#">Mas informacion</a>
-                                    <a class="dropdown-item" href="#">Editar</a>
-                                    <a class="dropdown-item" href="#">Eliminar</a>
-                                    </div>
+                    @foreach($propietarios as $propietario)
+                        <tr>                            
+                            <td>{{ $propietario->id }}</td>
+                            <td>{{ $propietario->nombre }}</td>
+                            <td>{{ $propietario->apellido }}</td>
+                            <td>{{ $propietario->CI }}</td>
+                            <td>{{ $propietario->telefono }}</td>
+                            <td>{{ $propietario->created_at }}</td>                            
+                            <td class="text-right">
+                            <div class="dropdown">
+                                <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-ellipsis-v"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                <a class="dropdown-item" href="#">Mas informacion</a>
+                                <a class="dropdown-item" href="#">Editar</a>
+                                <a class="dropdown-item" href="#">Eliminar</a>
                                 </div>
-                                </td>
-                            </tr>
-                        @endforeach
+                            </div>
+                            </td>
+                        </tr>
+                    @endforeach                    
                     </tbody>
                 </table>
                 </div>

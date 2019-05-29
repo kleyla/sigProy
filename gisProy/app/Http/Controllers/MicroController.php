@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\micro;
 use Illuminate\Http\Request;
+use App\propietario;
+use App\conductor;
+use App\ruta;
 
 class MicroController extends Controller
 {
@@ -23,7 +26,10 @@ class MicroController extends Controller
     }
 
     public function microNew(){
-        return view('admin.microNew');
+        $propietarios= propietario::all();
+        $conductors = conductor::all();
+        $rutas = ruta::all();
+        return view('admin.microNew', compact("propietarios", "conductors", "rutas"));
     }
 
     public function microSave(Request $request){
@@ -32,8 +38,8 @@ class MicroController extends Controller
         $micro->modelo= $request->input('modelo');
         $micro->interno =$request->input('interno');
         $micro->capacidad= $request->input('capacidad');
-        $micro->IdConductor=1;
-        $micro->IdPropietario=1;
+        $micro->IdConductor=$request->input('conductor');
+        $micro->IdPropietario=$request->input('propietario');
         $micro->IdRuta=1;
         $micro->save();
         return redirect('/admin/micros');

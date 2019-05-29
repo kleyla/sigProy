@@ -27,6 +27,24 @@ class RutaController extends Controller
         
     }
 
+    public function rutas(){
+        $rutas = ruta::all();
+        return view('admin.rutas', compact("rutas"));
+    }
+
+    public function rutaNew(){
+        return view('admin.rutaNew');
+    }
+
+    public function rutaSave(Request $request){
+        $ruta = new ruta();
+        $ruta->Nombre = $request->input('nombre');
+        $ruta->Punto_inicio = $request->input('puntoInicial');
+        $ruta->Punto_final = $request->input('puntoFinal');
+        $ruta->save();
+        return redirect ('/admin/rutas');
+
+    }
     /**
      * Store a newly created resource in storage.
      *

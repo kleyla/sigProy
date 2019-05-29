@@ -34,3 +34,15 @@ Route::get('/admin/ruta', 'RutaController@index')->name('ruta');
 Route::get('/admin/propietarios', 'PropietarioController@propietarios')->name('propietarios');
 Route::get('/admin/propietarioNew', 'PropietarioController@propietarioNew')->name('propietarioNew');
 Route::post('/admin/propietarioSave', 'PropietarioController@propietarioSave')->name('propietarioSave');
+
+Route::get('/admin/conductorNew', 'ConductorController@conductorNew')->name('conductorNew');
+Route::post('/admin/conductorSave', 'ConductorController@conductorSave')->name('conductorSave');
+
+Route::get('/admin/users', 'UserController@users')->name('users');
+Route::get('/admin/userNew', 'UserController@userNew')->name('userNew');
+Route::post('/admin/userSave', 'UserController@userSave')->name('userSave');
+
+Route::get('/admin/rutas', 'RutaController@rutas')->name('rutas');
+Route::get('/admin/rutaNew', 'RutaController@rutaNew')->name('rutaNew');
+Route::post('/admin/rutaSave', 'RutaController@rutaSave')->name('rutaSave');
+

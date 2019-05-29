@@ -57,6 +57,51 @@
                             </div>
                             </div>                    
                         </div>
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group"> 
+                                    <label class="form-control-label" for="input-first-name">Seleccionar Propietario</label> <br>                                          
+                                    <label class="select state-error">											
+                                        <select class="form-control form-control-alternative" name="propietario">
+                                            @foreach($propietarios as $propietario)
+                                                <option value="{{ $propietario->id }}">
+                                                {{ $propietario->nombre }}</option>
+                                            @endforeach
+                                        </select>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group"> 
+                                    <label class="form-control-label" for="input-first-name">Seleccionar Conductor</label> <br>                                          
+                                    <label class="select state-error">											
+                                        <select class="form-control form-control-alternative" name="conductor">
+                                            @foreach($conductors as $conductor)
+                                                <option value="{{ $conductor->id }}">
+                                                {{ $conductor->nombre }}</option>
+                                            @endforeach
+                                        </select>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group"> 
+                                    <label class="form-control-label" for="input-first-name">Seleccionar Ruta</label> <br>                                          
+                                    <label class="select state-error">											
+                                        <select class="form-control form-control-alternative" name="ruta">
+                                            @foreach($rutas as $ruta)
+                                                <option value="{{ $ruta->id }}">
+                                                {{ $ruta->Nombre }}</option>
+                                            @endforeach
+                                        </select>
+                                    </label>
+                                </div>
+                            </div>                            
+                        </div>
                         </div>
                         <hr class="my-4" />
                         <div class="footer text-center">

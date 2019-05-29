@@ -129,6 +129,11 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="{{ route('users')}}">
+                <i class="ni ni-circle-08 text-pink"></i> Usuarios
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="{{ route('propietarios')}}">
                 <i class="ni ni-circle-08 text-pink"></i> Propietarios
                 </a>
@@ -139,7 +144,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('ruta') }}">
+                <a class="nav-link" href="{{ route('rutas') }}">
                 <i class="ni ni-pin-3 text-orange"></i> Ruta
                 </a>
             </li>

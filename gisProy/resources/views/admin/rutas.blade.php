@@ -102,9 +102,9 @@
         <div class="col">
             <div class="card shadow">
                 <div class="card-header border-0">
-                <h3 class="mb-0">Conductores</h3>
+                <h3 class="mb-0">Rutas</h3>
                     <div class="text-right">
-                            <a href="{{ route('conductorNew') }}" class="btn btn-primary">Nuevo</a>                        
+                            <a href="{{ route('rutaNew') }}" class="btn btn-primary">Nuevo</a>                        
                         </div>
                     </div>
                 <div class="table-responsive">
@@ -113,21 +113,19 @@
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Nombre</th>
-                        <th scope="col">Apellido</th>
-                        <th scope="col">CI</th>
-                        <th scope="col">Telefono</th>
+                        <th scope="col">Punto de Inicio</th>
+                        <th scope="col">Punto final</th>
                         <th scope="col">Fecha de creacion</th>
                     </tr>
                     </thead>
                     <tbody>
-                        @foreach($conductores as $conductor)
+                        @foreach($rutas as $ruta)
                             <tr>                            
-                                <td>{{ $conductor->id }}</td>
-                                <td>{{ $conductor->nombre }}</td>
-                                <td>{{ $conductor->apellido }}</td>
-                                <td>{{ $conductor->CI }}</td>
-                                <td>{{ $conductor->telefono }}</td>
-                                <td>{{ $conductor->created_at }}</td>                            
+                                <td>{{ $ruta->id }}</td>
+                                <td>{{ $ruta->Nombre }}</td>
+                                <td>{{ $ruta->Punto_inicio }}</td>
+                                <td>{{ $ruta->Punto_final }}</td>
+                                <td>{{ $ruta->created_at }}</td>                            
                                 <td class="text-right">
                                 <div class="dropdown">
                                     <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
