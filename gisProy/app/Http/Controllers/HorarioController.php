@@ -17,6 +17,24 @@ class HorarioController extends Controller
         //
     }
 
+    public function horarios(){
+        $horarios = horario::all();
+        return view('admin.horario.horarios', compact("horarios"));
+    }
+
+    public function horarioNew(){
+        return view('admin.horario.horarioNew');
+    }
+
+    public function horarioSave(Request  $request){
+        $horario = new horario();
+        $horario->hora_inicio = $request->input('hora_inicio');
+        $horario->hora_final = $request->input('hora_fin');
+        $horario->save();
+        return redirect('/admin/horario/horarios'); 
+
+    }
+
     /**
      * Show the form for creating a new resource.
      *

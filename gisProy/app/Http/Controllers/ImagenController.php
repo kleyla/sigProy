@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\turno;
+use App\Imagen;
 use Illuminate\Http\Request;
 
-class TurnoController extends Controller
+class ImagenController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,11 +15,6 @@ class TurnoController extends Controller
     public function index()
     {
         //
-    }
-
-    public function turnos(){
-        $turnos = turno::all();
-        return view('admin.turnos' , compact("turnos"));
     }
 
     /**
@@ -46,10 +41,10 @@ class TurnoController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\turno  $turno
+     * @param  \App\Imagen  $imagen
      * @return \Illuminate\Http\Response
      */
-    public function show(turno $turno)
+    public function show(Imagen $imagen)
     {
         //
     }
@@ -57,10 +52,10 @@ class TurnoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\turno  $turno
+     * @param  \App\Imagen  $imagen
      * @return \Illuminate\Http\Response
      */
-    public function edit(turno $turno)
+    public function edit(Imagen $imagen)
     {
         //
     }
@@ -69,10 +64,10 @@ class TurnoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\turno  $turno
+     * @param  \App\Imagen  $imagen
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, turno $turno)
+    public function update(Request $request, Imagen $imagen)
     {
         //
     }
@@ -80,10 +75,10 @@ class TurnoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\turno  $turno
+     * @param  \App\Imagen  $imagen
      * @return \Illuminate\Http\Response
      */
-    public function destroy(turno $turno)
+    public function destroy(Imagen $imagen)
     {
         //
     }

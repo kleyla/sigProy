@@ -46,3 +46,16 @@ Route::get('/admin/rutas', 'RutaController@rutas')->name('rutas');
 Route::get('/admin/rutaNew', 'RutaController@rutaNew')->name('rutaNew');
 Route::post('/admin/rutaSave', 'RutaController@rutaSave')->name('rutaSave');
 
+Route::get('/admin/turnos', 'TurnoController@turnos')->name('turnos');
+Route::get('/admin/rutaNew', 'RutaController@rutaNew')->name('rutaNew');
+Route::post('/admin/rutaSave', 'RutaController@rutaSave')->name('rutaSave');
+
+Route::get('/admin/horarios', 'HorarioController@horarios')->name('horarios');
+Route::get('/admin/horario/horarioNew', 'HorarioController@horarioNew')->name('horarioNew');
+Route::post('/admin/horarioSave', 'HorarioController@horarioSave')->name('horarioSave');
+
+Route::get('/admin/rutas/rutas', 'RutaController@rutas')->name('rutas');
+Route::get('/rutas/index', 'RutaController@create')->name('rutaCreate');
+Route::post('/rutas/create','RutaController@store')->name('rutaStore');
+
+Route::get('/admin/rutas/visualizar/{id}', 'RutaController@show')->name('visualizar');

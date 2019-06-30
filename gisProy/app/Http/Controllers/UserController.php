@@ -9,6 +9,7 @@ class UserController extends Controller
 {
     public function users(){
         $users= User::all();
+        //dd($users);
         return view('admin.users', compact("users"));
     }
 

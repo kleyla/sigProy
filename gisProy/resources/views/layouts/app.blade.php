@@ -124,11 +124,6 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('micros') }}">
-                <i class="ni ni-planet text-blue"></i> Micros
-                </a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" href="{{ route('users')}}">
                 <i class="ni ni-circle-08 text-pink"></i> Usuarios
                 </a>
@@ -143,9 +138,30 @@
                 <i class="ni ni-circle-08 text-pink"></i> Conductores
                 </a>
             </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('micros') }}">
+                <i class="ni ni-planet text-blue"></i> Micros
+                </a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('rutas') }}">
                 <i class="ni ni-pin-3 text-orange"></i> Ruta
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('rutas') }}">
+                <i class="ni ni-pin-3 text-orange"></i> Paradas
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('turnos') }}">
+                <i class="ni ni-bullet-list-67 text-red"></i> Turnos
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('horarios') }}">
+                <i class="ni ni-key-25 text-info"></i> Horarios
                 </a>
             </li>
             <li class="nav-item">
@@ -196,10 +212,10 @@
                         <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="media align-items-center">
                             <span class="avatar avatar-sm rounded-circle">
-                            <img alt="Image placeholder" src="{{asset('img/theme/team-4-800x800.jpg')}}">
+                            <img alt="Image placeholder" src="/img/users/{{ Auth::User()->imagen }}">
                             </span>
                             <div class="media-body ml-2 d-none d-lg-block">
-                                <span class="mb-0 text-sm  font-weight-bold">Jessica Jones</span>
+                                <span class="mb-0 text-sm  font-weight-bold">{{ Auth::User()->name }}</span>
                             </div>
                         </div>
                         </a>
@@ -270,7 +286,7 @@
   <script src="{{asset('vendor/chart.js/dist/Chart.extension.js')}}"></script>
   <!-- Argon JS -->
   <script src="{{asset('js/argon.js?v=1.0.0')}}"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBd3PjUqq81lIOfBPYXrQGWwK5T4ystZjA"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdG9dbToS4EEPT5rvxhdbLKZxiG6l8YPI"></script>
 </body>
 
 </html>

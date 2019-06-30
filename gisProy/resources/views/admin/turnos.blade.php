@@ -102,9 +102,9 @@
         <div class="col">
             <div class="card shadow">
                 <div class="card-header border-0">
-                <h3 class="mb-0">Usuarios</h3>
+                <h3 class="mb-0">Turnos</h3>
                     <div class="text-right">
-                            <a href="{{ route('userNew') }}" class="btn btn-primary">Nuevo</a>                        
+                            <a href="{{ route('conductorNew') }}" class="btn btn-primary">Nuevo</a>                        
                         </div>
                     </div>
                 <div class="table-responsive">
@@ -113,25 +113,19 @@
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Nombre</th>
-                        <th scope="col">email</th>
+                        <th scope="col">Horario</th>
                         <th scope="col">Fecha de creacion</th>
-                        <th scope="col">Imagen</th>
+                        <th scope="col">Fecha de modificacion</th>
                     </tr>
                     </thead>
                     <tbody>
-                        @foreach($users as $user)
+                        @foreach($turnos as $turno)
                             <tr>                            
-                                <td>{{ $user->id }}</td>
-                                <td>{{ $user->name }}</td>
-                                <td>{{ $user->email }}</td>
-                                <td>{{ $user->imagen }}</td> 
-                                <td>
-                                    <div class="avatar-group">
-                                        <a href="" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="R">
-                                        <img alt="Image placeholder" src="/img/users/{{$user->imagen}}" class="rounded-circle">
-                                        </a>
-                                    </div>
-                                </td>                           
+                                <td>{{ $turno->id }}</td>
+                                <td>{{ $turno->Nombre }}</td>
+                                <td>{{ $turno->Horario }}</td>
+                                <td>{{ $turno->created_at }}</td>
+                                <td>{{ $turno->updated_at }}</td>
                                 <td class="text-right">
                                 <div class="dropdown">
                                     <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\ruta;
 use Illuminate\Http\Request;
+use App\ubicacion;
+use DB;
 
 class RutaController extends Controller
 {
@@ -24,12 +26,12 @@ class RutaController extends Controller
      */
     public function create()
     {
-        
+        return view('admin.rutas.create');   
     }
 
     public function rutas(){
         $rutas = ruta::all();
-        return view('admin.rutas', compact("rutas"));
+        return view('admin.rutas.rutas', compact("rutas"));
     }
 
     public function rutaNew(){
@@ -53,7 +55,26 @@ class RutaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $ruta = new ruta();
+        $ruta->Nombre = $request->input('nombre');
+        $ruta->save();
+
+        $resultado = str_replace("(", "", $request->latLog);
+        $resultado1 = str_replace(")", "", $resultado);
+        $array = explode(",", $resultado1);
+        //dd($array);
+        //dd(sizeof($array));
+        for ($i=0; $i<sizeof($array); $i++){
+            $ubicacion = new ubicacion();
+            $ubicacion->Latitud = $array[$i];
+            $ubicacion->Longitud = $array[$i+1];
+            $ubicacion->Nombre = "Default";
+            $ubicacion->ruta_id = $ruta->id;
+            $ubicacion->save();
+            $i++;
+        }
+
+        return redirect('/admin/rutas');
     }
 
     /**
@@ -62,9 +83,21 @@ class RutaController extends Controller
      * @param  \App\ruta  $ruta
      * @return \Illuminate\Http\Response
      */
-    public function show(ruta $ruta)
+    public function show($id)
     {
-        //
+        $lat = DB::table('ubicacions')
+        ->select('ubicacions.Latitud')
+        ->where('ruta_id', '=', $id)
+        ->get();
+
+        $lng = DB::table('ubicacions')
+        ->select('ubicacions.Longitud')
+        ->where('ruta_id', '=', $id)
+        ->get();
+        
+        
+        //dd($ruta);
+        return view('admin.rutas.visualizar');
     }
 
     /**

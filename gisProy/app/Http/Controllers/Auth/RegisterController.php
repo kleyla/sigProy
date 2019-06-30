@@ -61,11 +61,14 @@ class RegisterController extends Controller
      * @return \App\User
      */
     protected function create(array $data)
-    {
-        return User::create([
+    {   
+        $imagen = "Foto-de-Perfil-en-WhatsApp-1024x768.jpg";
+        $crear= User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'imagen' => $imagen,
         ]);
+        return $crear;
     }
 }

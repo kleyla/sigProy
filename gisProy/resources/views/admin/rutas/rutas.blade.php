@@ -102,9 +102,9 @@
         <div class="col">
             <div class="card shadow">
                 <div class="card-header border-0">
-                <h3 class="mb-0">Usuarios</h3>
+                <h3 class="mb-0">Rutas</h3>
                     <div class="text-right">
-                            <a href="{{ route('userNew') }}" class="btn btn-primary">Nuevo</a>                        
+                            <a href="{{ route('rutaCreate') }}" class="btn btn-primary">Nuevo</a>                        
                         </div>
                     </div>
                 <div class="table-responsive">
@@ -113,32 +113,22 @@
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Nombre</th>
-                        <th scope="col">email</th>
                         <th scope="col">Fecha de creacion</th>
-                        <th scope="col">Imagen</th>
                     </tr>
                     </thead>
                     <tbody>
-                        @foreach($users as $user)
+                        @foreach($rutas as $ruta)
                             <tr>                            
-                                <td>{{ $user->id }}</td>
-                                <td>{{ $user->name }}</td>
-                                <td>{{ $user->email }}</td>
-                                <td>{{ $user->imagen }}</td> 
-                                <td>
-                                    <div class="avatar-group">
-                                        <a href="" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="R">
-                                        <img alt="Image placeholder" src="/img/users/{{$user->imagen}}" class="rounded-circle">
-                                        </a>
-                                    </div>
-                                </td>                           
+                                <td>{{ $ruta->id }}</td>
+                                <td>{{ $ruta->Nombre }}</td>
+                                <td>{{ $ruta->created_at }}</td>                            
                                 <td class="text-right">
                                 <div class="dropdown">
                                     <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="fas fa-ellipsis-v"></i>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                    <a class="dropdown-item" href="#">Mas informacion</a>
+                                    <a class="dropdown-item" href="{{ route('visualizar',$ruta->id) }}">Ver Ruta</a>
                                     <a class="dropdown-item" href="#">Editar</a>
                                     <a class="dropdown-item" href="#">Eliminar</a>
                                     </div>

@@ -33,16 +33,28 @@ class MicroController extends Controller
     }
 
     public function microSave(Request $request){
-        $micro = new Micro();
-        $micro->placa= $request->input('placa');
-        $micro->modelo= $request->input('modelo');
-        $micro->interno =$request->input('interno');
-        $micro->capacidad= $request->input('capacidad');
-        $micro->IdConductor=$request->input('conductor');
-        $micro->IdPropietario=$request->input('propietario');
-        $micro->IdRuta=1;
-        $micro->save();
-        return redirect('/admin/micros');
+        //guardar la imagen
+        $file =$request->file('photo');
+        if($file){
+            $path = public_path() . '/img/micros'; 
+            $fileName = uniqid() . $file->getClientOriginalName();
+            $file->move($path, $fileName);    	
+            $micro = new Micro();
+            $micro->imagen= $fileName;
+            $micro->placa= $request->input('placa');
+            $micro->modelo= $request->input('modelo');
+            $micro->interno =$request->input('interno');
+            $micro->capacidad= $request->input('capacidad');
+            $micro->IdConductor=$request->input('conductor');
+            $micro->IdPropietario=$request->input('propietario');
+            $micro->IdRuta=1;
+            
+            $micro->save();
+            return redirect('/admin/micros');
+        }else{
+            return redirect('/admin/welcome');
+        }
+    	
     }
     /**
      * Show the form for creating a new resource.

@@ -104,7 +104,7 @@
                 <div class="card-header border-0">
                 <h3 class="mb-0">Rutas</h3>
                     <div class="text-right">
-                            <a href="{{ route('rutaNew') }}" class="btn btn-primary">Nuevo</a>                        
+                            <a href="{{ route('rutaCreate') }}" class="btn btn-primary">Nuevo</a>                        
                         </div>
                     </div>
                 <div class="table-responsive">

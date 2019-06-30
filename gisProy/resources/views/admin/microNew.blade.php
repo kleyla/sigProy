@@ -25,7 +25,7 @@
                 </div>
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('microSave') }}" class="smart-form" role="form" method="post">
+                    <form action="{{ route('microSave') }}" class="smart-form" role="form" method="post" enctype="multipart/form-data">
                             {{csrf_field()}}
                         <h6 class="heading-small text-muted mb-4">Introduzca los siguientes datos</h6>
                         <div class="pl-lg-4">
@@ -100,7 +100,15 @@
                                         </select>
                                     </label>
                                 </div>
-                            </div>                            
+                            </div>
+                            <div class="col-lg-6">
+                                <fieldset>
+                                    <label class="form-control-label" for="input-first-name">Seleccionar Imagen</label> <br>					
+                                    <section>
+                                      <input type="file" name="photo" id="photo" required>                                   
+                                    </section>
+                                </fieldset>
+                            </div>
                         </div>
                         </div>
                         <hr class="my-4" />

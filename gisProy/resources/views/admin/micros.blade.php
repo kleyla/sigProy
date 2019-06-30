@@ -116,6 +116,7 @@
                         <th scope="col">Capacidad</th>
                         <th scope="col">Modelo</th>
                         <th scope="col">Fecha Ingreso</th>
+                        <th scope="col">Imagen</th>
                         <th scope="col"></th>
                     </tr>
                     </thead>
@@ -127,17 +128,24 @@
                             <td>{{ $micro->capacidad }}</td>
                             <td>{{ $micro->modelo }}</td>
                             <td>{{ $micro->created_at }}</td>                            
-                            <td class="text-right">
-                            <div class="dropdown">
-                                <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-ellipsis-v"></i>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                <a class="dropdown-item" href="#">Mas informacion</a>
-                                <a class="dropdown-item" href="#">Editar</a>
-                                <a class="dropdown-item" href="#">Eliminar</a>
+                            <td>
+                                <div class="avatar-group">
+                                    <a href="" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Imagen del micro">
+                                    <img alt="Image placeholder" src="/img/micros/{{$micro->imagen}}" class="rounded-circle">
+                                    </a>
                                 </div>
-                            </div>
+                            </td>
+                            <td class="text-right">
+                                <div class="dropdown">
+                                    <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                    <a class="dropdown-item" href="#">Mas informacion</a>
+                                    <a class="dropdown-item" href="#">Editar</a>
+                                    <a class="dropdown-item" href="#">Eliminar</a>
+                                    </div>
+                                </div>
                             </td>
                         </tr>
                     @endforeach                    

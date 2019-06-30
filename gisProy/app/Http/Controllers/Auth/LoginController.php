@@ -4,6 +4,10 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+use App\User;
+use DB;
+use Hash;
 
 class LoginController extends Controller
 {
@@ -35,5 +39,41 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    public function validateLoginu(Request $request)
+    {
+        if ($request) {
+            $email = $request->get('Email');
+            $password = $request->get('Password');
+
+            $user = DB::table('users')
+                ->select('password', 'id')
+                ->where('email', '=', $email)->get();
+            if (empty($user)) {
+                $array = array(
+                    "Tipo" => 0,
+                );
+                return response()->json($array);
+            } else {
+                $id = $user[0]->id;
+                $pass = ($user[0]->password);
+                if (Hash::check($password,$pass)) {
+                    $idConductor = DB::table('conductors')
+                    ->select('id')
+                    ->where('IdUser', '=', $id)->get();
+                    $array = array(
+                        "Id" => $idConductor,
+                        "Tipo" => 1,
+                    );
+                    return response()->json($array);
+                } else {
+                    $array = array(
+                        "Tipo" => 0,
+                    );
+                    return response()->json($array);
+                }
+            }
+        }
     }
 }
